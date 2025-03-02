@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel - ResoBridge</title>
+    <link rel="stylesheet" href="css/admin.css" />
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+  </head>
+  <body>
+    <!-- Heading Navbar -->
+    <header class="admin-header">
+      <div class="text-left">
+        <h1>ResoBridge Admin</h1>
+      </div>
+      <div class="text-right">
+        <ul>
+          <li class="user-welcome">WELCOME <span id="username">[USERNAME]</span></li>
+          <li><a href="#" class="header-link">VIEW SITE</a></li>
+          <li><a href="#" class="header-link change-password">CHANGE PASSWORD</a></li>
+          <li><a href="#" class="header-link logout">LOGOUT</a></li>
+        </ul>
+      </div>
+    </header>
+    <!-- Heading Navbar end -->
+
+    <!-- Main body section -->
+    <section class="main-body">
+      <div class="main-body-heading">
+        <h2>Site Administration</h2>
+      </div>
+      <div class="main-body-content">
+        <div class="admin-grid">
+          <div class="usermanager admin-card">
+            <div class="card-header">
+              <h3>User Manager</h3>
+              <button class="add-btn" data-section="usermanager">
+                <i class="fas fa-plus"></i> Add New
+              </button>
+            </div>
+            <div class="usermanager-subtext card-content">
+              <div class="user-item">
+                <span>Daniel Hall</span>
+                <div class="user-actions">
+                  <button class="edit-btn"><i class="fas fa-pen"></i> Edit</button>
+                  <button class="delete-btn"><i class="fas fa-trash"></i> Delete</button>
+                </div>
+              </div>
+              <div class="user-item">
+                <span>Peter Hall</span>
+                <div class="user-actions">
+                  <button class="edit-btn"><i class="fas fa-pen"></i> Edit</button>
+                  <button class="delete-btn"><i class="fas fa-trash"></i> Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="categories admin-card">
+            <div class="card-header">
+              <h3>Categories</h3>
+              <button class="add-btn" data-section="categories">
+                <i class="fas fa-plus"></i> Add New
+              </button>
+            </div>
+            <div class="categories-subtext card-content">
+              <div class="category-item">
+                <span>Civil works to hall porters</span>
+                <div class="category-actions">
+                  <button class="edit-btn"><i class="fas fa-pen"></i> Edit</button>
+                  <button class="delete-btn"><i class="fas fa-trash"></i> Delete</button>
+                </div>
+              </div>
+              <div class="category-item">
+                <span>Plumbing to hall porters</span>
+                <div class="category-actions">
+                  <button class="edit-btn"><i class="fas fa-pen"></i> Edit</button>
+                  <button class="delete-btn"><i class="fas fa-trash"></i> Delete</button>
+                </div>
+              </div>
+              <!-- More categories added dynamically -->
+            </div>
+          </div>
+
+          <div class="systemlogs admin-card">
+            <div class="card-header">
+              <h3>System Logs</h3>
+              <button class="view-logs-btn">
+                <i class="fas fa-eye"></i> View Logs
+              </button>
+            </div>
+            <div class="systemlogs-subtext card-content">
+              <div class="log-summary">
+                <div class="log-item">
+                  <span>Track Activity</span>
+                  <span class="log-date">Jan 31, 2025</span>
+                </div>
+                <div class="log-item">
+                  <span>Performance</span>
+                  <span class="log-date">Jan 30, 2025</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modals -->
+    <div id="modal-overlay" class="modal-overlay hidden">
+      <div class="modal">
+        <div class="modal-header">
+          <h4>Add/Edit Item</h4>
+          <button class="close-modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form id="admin-form">
+            <input type="text" placeholder="Enter name" required>
+            <div class="form-actions">
+              <button type="submit" class="submit-btn">Save</button>
+              <button type="button" class="cancel-btn">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+  </body>
+</html>

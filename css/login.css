@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background: #23242a;
+}
+
+.wrapper {
+    position: relative;
+    width: 400px;
+    height: 420px;
+    background: #1c1c1c;
+    border-radius: 10px ;
+    overflow: hidden;
+}
+
+.wrapper::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 400px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent,transparent,#F0CA30,#F0CA30,#F0CA30);
+    z-index: 1;
+    animation: animate 6s linear infinite;
+    transform-origin: bottom right;
+}
+
+.wrapper::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 400px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent,transparent,#F0CA30,#F0CA30,#F0CA30);
+    z-index: 1;
+    animation: animate 6s linear infinite;
+    transform-origin: bottom right;
+    animation-delay: -3s;
+}
+
+.border-line {
+    position: absolute;
+    top: 0;
+    inset: 0;
+}
+
+.border-line::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 400px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent,transparent,#4C327D,#4C327D,#4C327D);
+    z-index: 1;
+    animation: animate 6s linear infinite;
+    transform-origin: bottom right;
+    animation-delay: -1.5s;
+}
+
+
+.border-line::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 400px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent,transparent,#4C327D,#4C327D,#4C327D);
+    z-index: 1;
+    animation: animate 6s linear infinite;
+    transform-origin: bottom right;
+    animation-delay: -4.5s;
+}
+
+/* Animation Typeshit */
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.wrapper form {
+    position: absolute;
+    inset: 4px;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 40px;
+    background: #222; 
+    border-radius: 8px;
+    z-index: 2;
+}
+
+.wrapper form h2 {
+    color: azure;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+.wrapper .input-box {
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+}
+
+
+.wrapper .input-box input {
+    position: relative;
+    width: 100%;
+    background: transparent;
+    padding: 20px 10px 20px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: #23242a;
+    letter-spacing: 0.1em;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+
+.wrapper .input-box span {
+    position: absolute;
+    left: 0;
+    padding: 20px 10px 20px;
+    pointer-events: none;
+    color: #8f8f8f;
+    font-size: 1em;
+    transition: 0.5s;
+
+}
+
+.wrapper .input-box input:valid ~ span,
+.wrapper .input-box input:focus ~ span {
+    color: azure;
+    font-size: 0.75em;
+    transform: translateY(-34px);
+}
+
+.wrapper form .input-box i{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #ffff;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.wrapper .input-box input:valid ~ i,
+.wrapper .input-box input:focus ~ i {
+    height: 44px;
+}
+
+.wrapper form .links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.wrapper form .links a {
+    text-decoration: none;
+    font-size: 0.75em;
+    font-weight: 400;
+    color: #8f8f8f;
+}    
+
+.wrapper form .links a:hover,
+.wrapper form .links a:nth-child(2){
+    color: #ffffff;
+}
+
+.wrapper form .btn {
+    border: none;
+    outline: none;
+    padding: 9px 25px;
+    background: #ffffff;
+    font-size: 14.5px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.wrapper form .btn:active {
+    opacity: 0.8;
+}
+
+.go-to-home{
+    display: flex;
+    padding: 20px 0px;
+}
+.go-to-home a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+
+/*media queries*/
+@media (max-width: 1200px) {
+    .wrapper{
+        width: 390px;
+        height: 400px;
+    }      
+}
+
+@media (max-width: 890px){
+    .wrapper{
+        width: 390px;
+        height: 400px;
+    }   
+    .wrapper form{
+        padding: 40px 30px;
+    }
+    
+.wrapper form h2 {
+    color: azure;
+    font-size: 25px;
+    font-weight: 500;
+}
+}
+@media (max-width: 768px){
+    .wrapper{
+        max-width: 335px;
+        height: 350px;
+    }
+    .wrapper::before{
+        width: 335px;
+        height: 350px;
+    }
+    .wrapper::after{
+        width: 335px;
+        height: 350px;
+    }
+    .border-line::before{
+        width: 335px;
+        height: 350px;
+    }
+    .border-line::after{
+        width: 335px;
+        height: 350px;
+    }
+    .wrapper .input-box {
+        position: relative;
+        width: 270px;
+    }
+    .wrapper .input-box input {
+        position: relative;
+        width: 100%;
+        background: transparent;
+        padding: 15px 7px 15px;
+    } 
+    .wrapper .input-box span {
+        padding: 15px 7px 15px;
+        font-size: 0.75em;
+    }   
+    .wrapper form .input-box i{
+        width: 100%;
+    }
+}
+@media (max-width: 500px){
+    .wrapper{
+        width: 300px;
+        height: 340px;
+    }
+
+.wrapper::before{
+    width: 300px;
+    height: 320px;
+}
+.wrapper::after{
+    width: 300px;
+    height: 320px;
+}
+.border-line::before{
+    width: 300px;
+    height: 320px;
+}
+.border-line::after{
+    width: 300px;
+    height: 320px;
+}
+.wrapper .input-box {
+    position: relative;
+    width: 230px;
+}
+.wrapper .input-box input {
+    position: relative;
+    width: 100%;
+    background: transparent;
+    padding: 12px 5px 12px;
+} 
+.wrapper .input-box span {
+    padding: 12px 5px 12px;
+    font-size: 0.75em;
+}   
+.wrapper form .input-box i{
+    width: 100%;
+}
+.wrapper form {
+    padding: 40px 30px;
+}
+.wrapper form .btn {
+    margin-bottom: 10px;
+}
+}

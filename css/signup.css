@@ -1,0 +1,35 @@
+.limit {
+  width: 100%;
+  margin: 0px auto;
+}
+.container-page {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(-135deg, #bc45b4, #4158d0);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.wrap-login {
+  width: 900px;
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow: hidden;
+  border-radius: 15px;
+  padding: 177px 130px 33px 95px;
+}
+.img-container img{
+    width: 300px;
+}
+form .login-form-title{
+    font-size: 24px;
+    width: 100%;
+    color: #333;
+    width: 100%;
+    display: block;
+    padding-bottom: 54px;
+}

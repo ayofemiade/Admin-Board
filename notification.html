@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notifications - ResoBridge</title>
+    <link rel="stylesheet" href="css/notification.css" />
+    <link rel="stylesheet" href="fontawesome/css/fontawesome.css" />
+    <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="fontawesome/css/brands.css" />
+    <link rel="stylesheet" href="fontawesome/css/brands.min.css" />
+    <link rel="stylesheet" href="fontawesome/css/solid.css" />
+    <link rel="stylesheet" href="fontawesome/css/solid.min.css" />
+  </head>
+  <body>
+    <div class="grid-container">
+      <header class="header">
+        <div class="menu-icon">
+          <i class="fa-solid fa-list menu-btn" onclick="openSidebar()"></i>
+        </div>
+        <div class="header-left">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="header-right">
+          <a href="notification.html">
+            <i class="fa-regular fa-bell"></i>
+          </a>
+
+          <i class="fa-solid fa-user"></i>
+        </div>
+      </header>
+
+      <aside id="sidebar" class="sidebarr">
+        <div class="sidebar-title">
+          <div class="sidebar-brand">RESOBRIDGE</div>
+          <i class="fa-solid fa-x" onclick="closeSidebar()"></i>
+        </div>
+        <ul class="sidebar-list">
+          <a href="staff-dashboard.html" class="sidebar-list-items-a">
+            <li class="sidebar-list-items">
+              <i class="fa-solid fa-grip"></i> Dashboard
+            </li>
+          </a>
+          <a href="taskmanager.html" class="sidebar-list-items-a">
+            <li class="sidebar-list-items">
+              <i class="fa-solid fa-address-card"></i>
+              Task Manager
+            </li>
+          </a>
+          <a href="issuestatus.html" class="sidebar-list-items-a">
+            <li class="sidebar-list-items">
+              <i class="fa-solid fa-arrows-rotate"></i> Issue Status
+            </li>
+          </a>
+          <a href="submitacomplain.html" class="sidebar-list-items-a">
+            <li class="sidebar-list-items">
+              <i class="fa-solid fa-arrow-trend-up"></i> Submit a Complain
+            </li>
+          </a>
+          <a href="notification.html" class="sidebar-list-items-a">
+            <li class="sidebar-list-items active">
+              <i class="fa-regular fa-bell"></i> Notification
+            </li>
+          </a>
+          <li class="sidebar-list-items">
+            <i class="fa-solid fa-toolbox"></i> Settings
+          </li>
+        </ul>
+      </aside>
+
+      <main class="main-container">
+        <div class="main-title">
+          <h2>NOTIFICAION</h2>
+        </div>
+        <div class="notification-content">
+          <ul>
+            <li>
+              <p>You have no notification</p>
+            </li>
+          </ul>
+        </div>
+      </main>
+    </div>
+    <script src="js/app.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/dashboardstu.js"></script>
+  </body>
+</html>

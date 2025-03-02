@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ResoBridge Admin</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: var(--bs-primary-dash);
+        }
+        .login-container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        .login-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .login-form {
+            display: flex;
+            flex-direction: column;
+        }
+        .login-form input {
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+        }
+        .login-form button {
+            background-color: var(--bs-secondary);
+            color: white;
+            border: none;
+            padding: 0.75rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .login-form button:hover {
+            background-color: var(--bs-secondary-dash);
+        }
+        .error-message {
+            color: red;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <h2>ResoBridge Login</h2>
+            <p>Sign in to your account</p>
+        </div>
+        <form id="login-form" class="login-form">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <div id="error-message" class="error-message"></div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('error-message');
+
+            // Simple mock authentication (replace with real authentication)
+            if (username === 'admin' && password === 'password123') {
+                // Successful login
+                window.location.href = 'admin.html';
+            } else if (username === 'staff' && password === 'password123') {
+                // Successful login
+                window.location.href = 'staff-dashboard.html';
+            } else if (username === 'student' && password === 'password123'){
+                // Successful login
+                window.location.href = 'student-dashboard.html'
+            }
+            else {
+                // Failed login
+                errorMessage.textContent = 'Invalid username or password';
+            }
+        });
+    </script>
+</body>
+</html>
