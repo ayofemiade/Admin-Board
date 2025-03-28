@@ -51,15 +51,23 @@ document.addEventListener("DOMContentLoaded", () => {
         break;
       case "submit-complaint":
         content.innerHTML = `
-                    <h1>Submit a Complaint</h1>
+                    <h1>Submit a Complaintt</h1>
                     <form id="complaint-form">
                         <label for="title">Complaint Title:</label>
-                        <input type="text" id="title" name="title" required>
+                        <input type="text" id="title" name="title" placeholder="e.g Spoilt Locker" required>
 
                         <label for="description">Complaint Description:</label>
-                        <textarea id="description" name="description" placeholder="e.g Spoilt Locker" required></textarea>
+                        <textarea id="description" name="description" placeholder="Provide a detailed description of what needs to be fixed" required></textarea>
+                        
+                        <label for="urgencylevel">Urgency Level</label>
+                        <select id="urgencylevel" name="urgencylevel" required>
+                        <option value="">Select your the urgency level</option>
+                        <option value="low">Low</option>
+                        <option moderate="">Moderate</option>
+                        <option critical="">Critical</option>   
+                        </select>                     
 
-                        <label for="category">Room Number:</label>
+                        <label for="roomno">Room Number:</label>
                         <select id="roomno" name="roomno" required>
                             <option value="">Select your room number</option>
                             <option value="a101">A101</option>
@@ -99,9 +107,11 @@ document.addEventListener("DOMContentLoaded", () => {
                         <label for="category">Category:</label>
                         <select id="category" name="category" required>
                             <option value="">Select a category</option>
-                            <option value="civilworks">CIVIL WORKS</option>
-                            <option value="electrical">ELECTRICAL</option>
-                            <option value="plumbing">PLUMBING</option>
+                            <option value="civilworks">CIVIL WORKS e.g Capentry, Nets, Doors etc</option>
+                            <option value="electrical">ELECTRICAL e.g Bulbs, Fan, Sockets etc</option>
+                            <option value="plumbing">PLUMBING e.g Pipes, Water Leakages</option>
+                            <option value="csis">CSIS e.g WIFI</option>
+                            <option value="mss">MSS e.g Theft, Assult, other security issues</option>
                         </select>
 
                         <label for="file">File Upload (optional):</label>
@@ -113,6 +123,9 @@ document.addEventListener("DOMContentLoaded", () => {
         document
           .getElementById("complaint-form")
           .addEventListener("submit", handleComplaintSubmit);
+
+          
+
         break;
       case "track-complaints":
         content.innerHTML = `
@@ -170,7 +183,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function handleComplaintSubmit(e) {
     e.preventDefault();
-    // Here you would typically send the form data to a server
+    // Here you would typically send the form data to a server 
+    // const dateoftoday = new Date();
+    // const curDate = dateoftoday.toDateString(); 
     alert("Complaint submitted successfully!");
     e.target.reset();
   }
@@ -181,14 +196,14 @@ document.addEventListener("DOMContentLoaded", () => {
       {
         id: 1,
         title: "Broken chair in classroom",
-        date: "2023-05-01",
+        date: "2023-01-15",
         status: "submitted",
       },
       {
         id: 2,
         title: "Noisy air conditioning",
-        date: "2023-05-03",
-        status: "approved",
+        date: "2023-03-02",
+        status: "submitted",
       },
       {
         id: 3,

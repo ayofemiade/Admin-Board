@@ -1,64 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/signUpp.css" >
-    <link rel="stylesheet" href="fontawesome/css/fontawesome.css">
-    <link rel="stylesheet" href="fontawesome/css/all.css">
-    <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
-    <link rel="stylesheet" href="fontawesome/css/solid.css">
-    <link rel="stylesheet" href="fontawesome/css/solid.min.css">
-    <link rel="shortcut icon" href="assests/img/rb-logo.jpg" type="image/x-icon">
-    <title>Signup | ResoBridge</title>
-</head>
-<body>
-    <section class="wrap">
-        <div class="wrapper">
-            <span class="border-line"></span>
-             <form action="#">
-                    <h2>Sign Up</h2>
-                 <div class="input-box">
-                         <input type="text" required="required">
-                              <span>First Name</span>
-                              <i></i>
-                 </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="assests/img/rb-logo.jpg"
+      type="image/x-icon"
+    />
+    <title>Signup - ResoBridge Admin</title>
+    <!-- <link rel="stylesheet" href="fontawesome/css/all.min.css" /> -->
+    <style>
+      :root {
+        --bs-primary-dash: #e6d9f5;
+        --bs-secondary: #6a2d9c;
+        --bs-secondary-dash: #435c93;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", "Gill Sans", "Gill Sans MT", Calibri,
+          "Trebuchet MS", sans-serif;
+      }
 
-                 <div class="input-box">
-                    <input type="text" required="required">
-                         <span>Last Name</span>
-                         <i></i>
-            </div>
+      body {
+        background-color: #f4f4f4;
+        color: var(--text-color);
+        line-height: 1.6;
+      }
 
-            <div class="input-box">
-                <input type="email" required="required">
-                     <span>Email</span><i class="fa-solid fa-envelope"></i>
-                     <i></i>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: var(--bs-primary-dash);
+      }
+      .login-container {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+      }
+      .login-header {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      .login-form {
+        display: flex;
+        flex-direction: column;
+        font-size: 13px;
+      }
+      .login-form .as-stu,
+      .as-sta,
+      .as-adm {
+        margin-bottom: 1rem;
+        padding: 0.75rem;
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+        text-align: center;
+      }
+      .login-form .signupcontent > div:hover {
+        background-color: #435c93;
+        transition: 0.3s all ease-in-out;
+        color: #fff;
+        cursor: pointer;
+      }
+      .error-message {
+        color: red;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-header">
+        <h2>ResoBridge Signup</h2>
+        <p>Create a new account</p>
+      </div>
+      <form id="login-form" class="login-form">
+        <div class="signupcontent">
+          <div class="as-stu"><h3>Student</h3></div>
+          <div class="as-sta"><h3>Staff</h3></div>
+          <div class="as-adm"><h3>Admin</h3></div>
         </div>
-                   
-                 <div class="input-box">
-                          <input type="password" required="required">
-                              <span>Passsword</span><i></i>
-                 </div>
 
-                 <div class="input-box">
-                    <input type="password" required="required">
-                         <span>Confirm Password</span>
-                         <i></i>
-            </div>
-                 <div class="links">
-                    <a href="#">Forgot Passsword</a>
-                    <a href="login.html">Sign In</a>
-                 </div>
-                    <input type="submit" class="btn" value="Sign Up">
-                    <div class="go-to-home">
-                        <a href="index.html" class="homeicon">
-                            <i class="fa-solid fa-house"></i> <span>Home</span> 
-                        </a>
-                    </div>
-             </form>
-        </div>
-    </section>
-    
-</body>
+        <div id="error-message" class="error-message"></div>
+      </form>
+    </div>
+  </body>
 </html>

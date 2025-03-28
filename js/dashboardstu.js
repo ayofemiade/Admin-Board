@@ -1,18 +1,16 @@
-var sidebarOpen = false;
-var sidebar = document.getElementsByClassName("sidebarr");
+var sidebarClose = true;
+var sidebar = document.querySelector(".sidebarr");
 
 function openSidebar() {
-  if (sidebarOpen) {
-    console.log("You clicked");
-    sidebar.classList.add(".sidebar-responsive");
-    sidebarOpen = true;
+  if (sidebarClose) {
+    sidebar.classList.add("sidebar-responsive");
+    sidebarClose = false;
   }
 }
 
 function closeSidebar() {
-  if (sidebarOpen) {
-    sidebar.classList.remove(".sidebar-responsive");
-    sidebarOpen = false;
-    console.log("You canceled clicked");
+  if (sidebarClose == false) {
+    sidebar.classList.remove("sidebar-responsive");
+    sidebarClose = true;
   }
 }

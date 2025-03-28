@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="assests/img/rb-logo.jpg"
+      type="image/x-icon"
+    />
+    <title>Student SignUp - ResoBridge Admin</title>
+    <link rel="stylesheet" href="css/admin.css" />
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: var(--bs-primary-dash);
+      }
+      .login-container {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+      }
+      .login-header {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      .login-form {
+        display: flex;
+        flex-direction: column;
+        font-size: 13px;
+      }
+      .login-form input {
+        margin-bottom: 1rem;
+        padding: 0.75rem;
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+      }
+      .login-form .btn_submit {
+        background-color: var(--bs-secondary);
+        color: white;
+        border: none;
+        padding: 0.75rem;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .login-form .btn_submit:hover {
+        background-color: var(--bs-secondary-dash);
+      }
+      .error-message {
+        color: red;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+      .login-form span {
+        font-weight: 500;
+        margin-bottom: 1rem;
+        padding: 0.75rem;
+        border: 1px solid var(--border-color);
+        color: rgb(117, 117, 117, 1);
+        border-radius: 4px;
+      }
+      .login-form h3 > .dropdown-menu {
+        position: relative;
+        background-color: #fff;
+        box-shadow: 0px 2px 3px rgb(0 0 0 / 20%);
+      }
+      .hidden {
+        display: none;
+      }
+      .login-as {
+        margin-bottom: 15px;
+        cursor: pointer;
+      }
+      .login-form h3 > .dropdown-menu ul {
+        list-style: none;
+      }
+      .login-form h3 > .dropdown-menu ul li {
+        font-weight: 500;
+        color: rgb(117, 117, 117, 1);
+        margin-left: 10px;
+        padding: 5px;
+      }
+      .login-form h3 > .dropdown-menu ul li:hover {
+        background-color: var(--bs-primary-dash);
+      }
+      .forgot-password {
+        padding-top: 12px;
+      }
+      .forgot-password a {
+        color: var(--bs-primary-dash);
+        text-decoration: none;
+      }
+      .forgot-password a:hover {
+        color: var(--bs-secondary);
+        transition: 0.3s ease-in-out;
+      }
+      .stud {
+        color: var(--bs-secondary);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-header">
+        <h2>ResoBridge Signup</h2>
+        <p><span class="stud">Student</span> - Create an account</p>
+      </div>
+      <form id="login-form" class="login-form">
+        <input type="text" id="text" placeholder="Full Name" required />
+        <input type="text" id="email" placeholder="University Email" required />
+        <input type="text" id="text" placeholder="Matric Number" required />
+        <input
+          type="password"
+          id="password"
+          value=""
+          placeholder="Password"
+          required
+        />
+        <input
+          type="password"
+          id="password"
+          value=""
+          placeholder="Confirm Password"
+          required
+        />
+        <h3 class="login-as" required>
+          <span id="loginAs">Current Campus Location</span>
+          <div class="hidden dropdown-menu">
+            <ul id="ul" re>
+              <li id="PETER HALL">PETER HALL</li>
+              <li id="JOHN HALL">JOHN HALL</li>
+              <li id="PAUL HALL">PAUL HALL</li>
+              <li id="JOSEPH HALL">JOSEPH HALL</li>
+              <li id="DANIEL HALL">DANIEL HALL</li>
+              <li id="DORCAS HALL">DORCAS HALL</li>
+              <li id="MARY HALL">MARY HALL</li>
+              <li id="LYDIA HALL">LYDIA HALL</li>
+              <li id="DEBORAH HALL">DEBORAH HALL</li>
+              <li id="MALE RESIDENTS">MALE RESIDENTS (Post-Graduate)</li>
+              <li id="FEMALE RESIDENTS">FEMALE RESIDENTS (Post-Graduate)</li>
+            </ul>
+          </div>
+        </h3>
+        <p class="forgot-password" id="forgotPassword">
+          <a href="#">Forgot Password? </a>
+        </p>
+        <div id="error-message" class="error-message"></div>
+        <button class="btn_submit" type="submit">Create Account</button>
+      </form>
+    </div>
+    <script src="js/signup.js"></script>
+  </body>
+</html>

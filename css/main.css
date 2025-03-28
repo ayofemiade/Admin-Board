@@ -11,7 +11,9 @@ body {
   font-size: 16px;
   line-height: 1.5;
   --bs-secondary: #6a2d9c;
-  --bs-primary: #D1697E;
+  --bs-primary: #D1697E; 
+  --bs-secondary-dash: #435c93; 
+  --bs-primary-dash: #e6d9f5;
 }
 
 .navbar {
