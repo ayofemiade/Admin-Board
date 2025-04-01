@@ -220,44 +220,141 @@ table tr:nth-child(even) {
   color: #2c3e50;
 }
 
-/* Responsive styles */
+/* Responsive Menu Styles for Small Screens */
+
+/* Improved Menu Toggle Button Style */
+.menu-toggle {
+  display: none;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 18px;
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 1000;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.menu-toggle:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+.menu-toggle:active {
+  transform: scale(0.95);
+}
+
+/* Optional: Add animation to the menu icon when sidebar is open */
+.menu-toggle i {
+  transition: transform 0.3s ease;
+}
+
+.sidebar.open + .content .menu-toggle i {
+  transform: rotate(90deg);
+}
+
+/* Adjustments for mobile screens */
 @media (max-width: 768px) {
   .dashboard {
     flex-direction: column;
   }
-
+  
+  .menu-toggle {
+    display: block;
+  }
+  
   .sidebar {
     width: 100%;
-    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    z-index: 999;
+    transition: left 0.3s ease;
+    overflow-y: auto;
   }
-
-  .sidebar h1 {
-    font-size: 20px;
+  
+  .sidebar.open {
+    left: 0;
   }
-
+  
   .content {
-    padding: 10px;
+    margin-top: 60px; /* Space for the menu button */
+    width: 100%;
   }
-
-  .welcome-section {
-    padding: 20px 10px;
-  }
-
-  .welcome-section h1 {
-    font-size: 28px;
-  }
-
-  .feature-grid {
-    grid-template-columns: 1fr;
-  }
-
+  
+  /* Improve table responsiveness */
   table {
-    font-size: 14px;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
   }
+  
+  /* Adjust form styles for mobile */
+  form {
+    padding: 15px;
+  }
+  
+  #complaint-form button[type="submit"] {
+    width: 100%;
+  }
+}
 
-  table th,
+/* Small screens */
+@media (max-width: 480px) {
+  .sidebar nav ul li a {
+    padding: 12px 8px;
+    font-size: 16px;
+  }
+  
+  .welcome-section h1 {
+    font-size: 24px;
+  }
+  
+  .feature-card {
+    padding: 15px;
+  }
+  
+  .feature-card i {
+    font-size: 36px;
+  }
+  
+  /* Make sure table data is readable */
+  table th, 
   table td {
-    padding: 8px;
+    padding: 8px 6px;
+    font-size: 13px;
+  }
+  
+  .status-badge {
+    padding: 3px 6px;
+    font-size: 10px;
+  }
+}
+
+/* Medium screens adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large screens optimizations */
+@media (min-width: 1025px) {
+  .content {
+    padding: 30px;
+  }
+  
+  .feature-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 

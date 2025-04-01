@@ -336,3 +336,32 @@ document.addEventListener("DOMContentLoaded", () => {
     alert(`Withdrawing complaint #${id}`);
   };
 });
+
+
+
+// Mobile menu functionality
+const menuToggle = document.getElementById('menuToggle');
+const sidebar = document.querySelector('.sidebar');
+
+menuToggle.addEventListener('click', () => {
+  sidebar.classList.toggle('open');
+});
+
+// Close menu when clicking on a link
+document.querySelectorAll('.sidebar nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth <= 768) {
+      sidebar.classList.remove('open');
+    }
+  });
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+  if (window.innerWidth <= 768 && 
+      !sidebar.contains(e.target) && 
+      e.target !== menuToggle && 
+      !menuToggle.contains(e.target)) {
+    sidebar.classList.remove('open');
+  }
+});
