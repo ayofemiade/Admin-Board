@@ -60,6 +60,7 @@ i {
   justify-content: center;
   padding: 30px 34px 34px 30px;
   margin-bottom: 30px;
+  flex-direction: column;
 }
 .sidebar-brand {
   margin-top: 15px;
@@ -73,6 +74,9 @@ i {
   padding: 0;
   margin-top: 15px;
   list-style-type: none;
+}
+.staff-position {
+  font-size: 12px;
 }
 .sidebar-list-items {
   padding: 20px 20px 20px 20px;
@@ -119,7 +123,13 @@ i {
   background-color: #435c93;
   color: rgb(255, 255, 255, 0.95);
 }
-.main-container .complaint-section {
+.main-container .complaint-section00 {
+  display: flex;
+  align-items: center;
+  justify-content: normal;
+  flex-wrap: wrap;
+}
+.main-container .complaint-section01 {
   display: flex;
   align-items: center;
   justify-content: normal;
@@ -147,11 +157,11 @@ i {
 }
 .card > a input {
   padding: 15px;
-  background: #3e5483;
+  background: #435c93;
   color: #fff;
   border: none;
   border-radius: 6px;
-  box-shadow: var(--box-shadow);
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.159);
 }
 .card > a input:hover {
   cursor: pointer;
@@ -161,7 +171,15 @@ i {
   align-items: center;
   justify-content: space-between;
 }
-
+.cat_name h3{
+  margin-right: 20px;
+}
+.cat_name .cat_btn_name {
+  padding: 10px;
+  background: #e6d9f5;
+  border: #333;
+  border-radius: 5px;
+}
 /* ====================== MEDIA QUERIES =================== */
 
 /* Medium = 992px */

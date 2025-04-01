@@ -9,6 +9,7 @@ body {
   --bs-secondary: #6a2d9c;
   --bs-primary: #d1697e;
   --bs-primary-dark: #933749;
+  --bs-secondary-light: #e6d9f5;
   --faded-text: rgba(55 53 53 / 70%);
   --box-shadow: 0px 5px 29px rgb(0 0 0 / 34%);
 }
@@ -26,7 +27,17 @@ i {
   display: flex;
   flex-direction: column;
 }
-.card-content ul h4{
+.card-content span button {
+  background: #2bc741;
+  color: #fff;
+  border: solid 0.4px #fff;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.card-content h5 {
+  margin: 0;
+}
+.card-content ul h4 {
   padding: 0;
   margin: 0;
 }
@@ -57,10 +68,13 @@ i {
   transition: 0.3s;
 }
 .card:first-child {
-  background-color: rgba(34, 238, 34, 0.64);
+  background-color: #22ee22ba;
 }
-.card:nth-child(2) {
+.card-2-defualt {
   background-color: #797878;
+}
+.card-2:nth-child(2) {
+  background-color: #22ee22ba;
 }
 .card:nth-child(3) {
   background-color: #797878;
@@ -103,6 +117,7 @@ i {
   justify-content: center;
   padding: 30px 34px 34px 30px;
   margin-bottom: 30px;
+  flex-direction: column;
 }
 .sidebar-brand {
   margin-top: 15px;
@@ -124,6 +139,9 @@ i {
 .sidebar-list-items-a {
   text-decoration: none;
   color: #333;
+}
+.staff-position {
+  font-size: 12px;
 }
 .sidebar-list-items:hover {
   background-color: rgb(255, 255, 255, 0.2);
@@ -170,7 +188,7 @@ i {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 25px;
+  padding: 10px;
   border-radius: 5px;
   box-shadow: 0px 5px 29px rgb(0 0 0 / 34%);
 }

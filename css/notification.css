@@ -60,6 +60,7 @@ i {
   justify-content: center;
   padding: 30px 34px 34px 30px;
   margin-bottom: 30px;
+  flex-direction: column;
 }
 .sidebar-brand {
   margin-top: 15px;
@@ -73,6 +74,9 @@ i {
   padding: 0;
   margin-top: 15px;
   list-style-type: none;
+}
+.staff-position {
+  font-size: 12px;
 }
 .sidebar-list-items {
   padding: 20px 20px 20px 20px;

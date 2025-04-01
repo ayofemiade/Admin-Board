@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Assingment - ResoBridge</title>
+    <style>
+      body {
+        padding: 30px 0px 10px 30px;
+        background: #e6d9f5;
+      }
+      .task-header-content hr {
+        margin-top: 30px;
+        width: 80rem;
+        margin-left: 0px;
+      }
+      .print:hover {
+        background-color: #e6d9f5;
+        color: #333;
+        transition: 0.3s ease-in-out;
+      }
+      .print {
+        padding: 10px 25px;
+        background-color: #435c93;
+        border: none;
+        color: #fff;
+      }
+      .task-section2 .task-header-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 50rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="task-assignment">
+      <div class="task-header">
+        <div class="task-heading">
+          <h2>RESOBRIDGE TASK ASSIGNMENT SHEET</h2>
+        </div>
+        <div class="task-header-content">
+          <p>
+            <b>University Name: </b
+            ><span id="uni_name">[Covenant University]</span>
+          </p>
+          <p><b>Date: </b><span id="date">20/10/2025</span></p>
+          <p><b>Staff in Charge: </b><span id="date"></span></p>
+          <p><b>Category: </b><span id="date">Electrical</span></p>
+          <hr />
+        </div>
+      </div>
+
+      <div class="task-section2">
+        <div class="task-heading"><h2>Assigned Tasks</h2></div>
+        <div class="task-header-content">
+          <div class="room-num">
+            <h3 class="room-num-header">Room Number</h3>
+            <div class="room-numbers">
+              <p>204</p>
+              <p>403</p>
+              <p>401</p>
+              <p>405</p>
+            </div>
+          </div>
+          <div class="room-num">
+            <h3 class="room-num-header">Complaint Title</h3>
+            <div class="room-numbers">
+              <p>Faulty Socket</p>
+              <p>Fan Not Working</p>
+              <p>Leaking Pipe</p>
+              <p>Broken Window</p>
+            </div>
+          </div>
+          <div class="room-num">
+            <h3 class="room-num-header">Assigned To (Role)</h3>
+            <div class="room-numbers">
+              <p>Electrician</p>
+              <p>Electrician</p>
+              <p>Plumber</p>
+              <p>Carpenter</p>
+            </div>
+          </div>
+          <div class="room-num">
+            <h3 class="room-num-header">Status (✔)</h3>
+            <div class="room-numbers">
+              <p><input type="checkbox" name="" id=""></p>
+              <p><input type="checkbox" name="" id=""></p>
+              <p><input type="checkbox" name="" id=""></p>
+              <p><input type="checkbox" name="" id=""></p>
+            </div>
+          </div>
+        </div>
+        <hr />
+      </div>
+      <div class="task-section3">
+        <div class="task-heading"><h2>Instructions for the Worker:</h2></div>
+        <div class="task-header-content">
+          <ul>
+            <li>
+              Complete each task and <b>tick (✔) the status column</b> once
+              done.
+            </li>
+            <li>
+              Return this sheet to the <b>staff in charge</b> once all tasks are
+              completed.
+            </li>
+            <li>
+              Staff may take <b>before/after photos for verification</b> if
+              needed.
+            </li>
+          </ul>
+          <hr />
+        </div>
+      </div>
+      <div class="task-section4">
+        <div class="task-heading"><h2>Verification by Staff</h2></div>
+        <div class="task-header-content">
+          <ul>
+            <p><b>Staff Signature: </b><span>_______________</span></p>
+            <p><b>Date of Completion: </b><span>_______________</span></p>
+          </ul>
+          <hr />
+          <p>
+            This document ensures
+            <b
+              >clear task assignment, accountability, and easy tracking of
+              completed work.</b
+            >
+          </p>
+          <button class="print" onclick="window.print()">PRINT</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
